@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="toggle-btn" onclick="toggleMode()">🌙</button>
+</nav>
+
+<section id="home">
+    <h1>Jay-ar Alajas</h1>
+    <p class="tagline">Aspiring Web Developer | IT Student</p>
+
+    <img src="final.jfif" alt="Profile Photo">
+
+    <p class="quote">“Mistakes are proof that you are coding.”</p>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p><strong>Education:</strong> BS in Information Technology</p>
+        <p><strong>Technical Interests:</strong> Game development,Cybersecurity, Networking</p>
+        <p><strong>Hobbies:</strong> Coding,Playing online games</p>
+        <p>
+            I am a second-year IT student passionate about creating
+            simple and effective software solutions.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="card">
+            <h4>Programming</h4>
+            <p>HTML, CSS, JavaScript, Python, C</p>
+        </div>
+
+        <div class="card">
+            <h4>Tools</h4>
+            <p>GitHub, VS Code, Linux</p>
+        </div>
+
+        <div class="card">
+            <h4>Technical Areas</h4>
+            <p>Web Development, Programming Fundamentals, Object-Oriented Programming (OOP)</p>
+        </div>
+
+        <div class="card">
+            <h4>Soft Skills</h4>
+            <p>Time management, Communication, Problem Solving</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card project">
+        <img src="project img.jfif" alt="Project Thumbnail">
+        <h3>N8N Automation Solution</h3>
+        <p>n8n is a powerful workflow automation platform that lets you connect apps, services, and APIs to automate processes without writing repetitive code.</p>
+        <p><strong>Role:</strong> Programmer</p>
+        <p><strong>Tools:</strong> Docker</p>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p>Email: <strong>your@email.com</strong></p>
+    <div class="socials">
+        <a href="https://github.com/Faccioooo" target="_blank" title="GitHub">
+          <img src="github-logo.png" alt="GitHub" style="width:32px; height:32px;">
+        </a>
+        <a href="https://www.facebook.com/share/14Rge2zYdnv/" target="_blank" title="Facebook">
+          <img src="facebook-logo.png" alt="Facebook" style="width:32px; height:32px;">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+    function toggleMode() {
+        document.body.classList.toggle("dark");
+        localStorage.setItem(
+            "theme",
+            document.body.classList.contains("dark") ? "dark" : "light"
+        );
+    }
+
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }
+</script>
+
+</body>
+</html>
